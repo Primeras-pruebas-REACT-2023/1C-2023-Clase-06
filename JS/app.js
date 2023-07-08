@@ -26,7 +26,7 @@ function renderinput(type) {
     myinput.render();
 }
 function rendervideo(alto,ancho,nombre,lugar) {
-    let my_video = new video("App",alto,ancho,nombre,lugar);
+    let my_video = new video("Video",alto,ancho,nombre,lugar);
     my_video.render();
 }
 //Programa de aplicacion o logica de aplicacion:
@@ -34,7 +34,7 @@ miarray.forEach(element => renderboton(element));
 inputarray.forEach (function(elemento){renderinput(elemento);});
 let arrayfiltrado = inputarray.filter( element => element=="Password");
 arrayfiltrado.forEach (function(elemento) {renderinput(elemento);});
-rendervideo("1080","1920","videito.mp4","video/mp4");
+rendervideo("108","192","DOC/videito.mp4","video/mp4");
 
 
 /*
