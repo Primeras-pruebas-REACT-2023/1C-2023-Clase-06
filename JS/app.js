@@ -1,11 +1,8 @@
 // Importo las clases que preciso
 import Boton from "./Components/Button.js"
 import input from "./Components/Inputs.js"
-
-// Datos utilizados 
-let inputarray = ["User", "Surname", "Password", "E-mail"];
-let miarray = ["Login", "logout", "otro"];
-let arrayfiltrado = inputarray.filter( element => element=="Password");
+import {inputarray,miarray} from "./Components/Datos.js"
+import video from "./Components/Video.js"
 
 // Funciones
 function renderboton(text) {
@@ -28,8 +25,21 @@ function renderinput(type) {
     let myinput = new input("App",input_type); 
     myinput.render();
 }
-
-// Programa de aplicacion o logica de aplicacion:
+function rendervideo(alto,ancho,nombre,lugar) {
+    let my_video = new video("App",alto,ancho,nombre,lugar);
+    my_video.render();
+}
+//Programa de aplicacion o logica de aplicacion:
 miarray.forEach(element => renderboton(element));
 inputarray.forEach (function(elemento){renderinput(elemento);});
+let arrayfiltrado = inputarray.filter( element => element=="Password");
 arrayfiltrado.forEach (function(elemento) {renderinput(elemento);});
+rendervideo("1080","1920","videito.mp4","video/mp4");
+
+
+/*
+
+    <video width="1080" height="1920" controls>
+        <source src="videito.mp4" type="video/mp4">
+      </video>
+*/
