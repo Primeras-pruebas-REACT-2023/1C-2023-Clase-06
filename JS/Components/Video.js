@@ -33,6 +33,9 @@ class video {
 
     Para lograr la dichosa comilla, podemos invocar al ASCII 96.
 
+    Para estos casos, debemos tambien tener en cuenta, la necesidad de pasar a cadena de texto las variables
+    por medio de ${}, por ej. ${this.alto}
+
 
 En HTML se escribe asi:
 
